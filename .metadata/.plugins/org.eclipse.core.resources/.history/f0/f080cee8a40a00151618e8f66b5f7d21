@@ -1,0 +1,163 @@
+package windows;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.Vector;
+
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+import com.model.ShopDao;
+import com.shop.BuyShop;
+import com.shop.ShopInformation;
+
+public class CXSPKC extends JInternalFrame {
+	private Object[] columnTitle = new Object[] { "商品编号", "商品名称", "商品售价",
+			 "库存数量","商品单位" };
+	private String[][] test = new String[][] {
+			{ "null", "null", "null",
+				 "null","null" } };
+	private JTable table;
+	private JButton selectButton = new JButton("查询");
+	private JButton selectAllButton = new JButton("显示全部数据");
+	private JLabel selectQueryL = new JLabel("选择查询条件");
+	private Vector<String> keHuVector = new Vector<>();
+	private Vector<String> conditionVector = new Vector<String>();
+	private JComboBox<String> keHu;
+	private JComboBox<String> condition;
+	private JTextField content = new JTextField(20);
+//	private JCheckBox isSelectByDate = new JCheckBox("指定查询日期", false);
+//	private JLabel from = new JLabel("从");
+//	private JLabel to = new JLabel("到");
+//	private JTextField fromC = new JTextField(14);
+//	private JTextField toC = new JTextField(14);
+	private DefaultTableModel model;
+	private JButton updateUsrAndPass = new JButton("修改用户名或密码");
+	private JButton updateButton = new JButton("修改此条记录");
+	private JButton delButton = new JButton("删除此条记录");
+	private ShopDao shopdao = new ShopDao();
+	public CXSPKC() {
+		this.setTitle("查询商品库存界面");
+		this.setResizable(true);
+		this.setClosable(true);
+		this.setMaximizable(true);
+		keHuVector.add("商品全称");
+		keHuVector.add("商品编号");
+		keHu = new JComboBox<String>(keHuVector);
+		conditionVector.add("包含");
+		conditionVector.add("等于");
+		condition = new JComboBox<String>(conditionVector);
+		JPanel selectQuery1 = new JPanel();
+		selectQuery1.add(selectQueryL);
+		selectQuery1.add(keHu);
+		selectQuery1.add(condition);
+		selectQuery1.add(content);
+//		JPanel selectQuery2 = new JPanel();
+//		selectQuery2.add(isSelectByDate);
+//		selectQuery2.add(from);
+//		selectQuery2.add(fromC);
+//		selectQuery2.add(to);
+//		selectQuery2.add(toC);
+		JPanel boxYSelectQuery = new JPanel();
+		boxYSelectQuery.setLayout(new BoxLayout(boxYSelectQuery,
+				BoxLayout.Y_AXIS));
+		boxYSelectQuery.add(selectQuery1);
+//		boxYSelectQuery.add(selectQuery2);
+		JPanel boxYButtons = new JPanel();
+		boxYButtons.setLayout(new BoxLayout(boxYButtons, BoxLayout.Y_AXIS));
+		boxYButtons.add(selectButton);
+		boxYButtons.add(selectAllButton);
+		JPanel selectYAll = new JPanel();
+		selectYAll.add(boxYSelectQuery);
+		selectYAll.add(boxYButtons, BorderLayout.EAST);
+		this.add(selectYAll, BorderLayout.NORTH);
+		model = new DefaultTableModel(test, columnTitle);
+		table = new JTable(model);
+		JScrollPane tableScrollPanel = new JScrollPane(table);
+		this.add(tableScrollPanel);
+		Box updateBox = new Box(BoxLayout.X_AXIS);
+		updateBox.add(new JLabel("------------------------------------------------------------------------------------------"));
+		updateBox.add(updateUsrAndPass);
+		updateBox.add(updateButton);
+		updateBox.add(delButton);
+		updateBox.add(new JLabel("---------------------------------------------------------------"));
+		this.add(updateBox, BorderLayout.SOUTH);
+		selectButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int count = model.getRowCount();
+				Vector<ShopInformation> v = new Vector<>();
+				for (int i = 0; i < count; i++) {
+					model.removeRow(0);
+				}
+				if((keHu.getSelectedItem()+"").equals("商品编号") ){
+					try {
+						v = shopdao.selectSI(content.getText()+"","");
+						String[] s = new String[5];
+						int i = 0;
+						for(ShopInformation ss: v){
+							s[0] = ss.getGoodID();
+							s[1] = ss.getGoodName();
+							s[2] = ss.getGoodPrice()+"";
+							s[3] = ss.getGoodNum()+"";
+							s[4] = ss.getGoodUnit()+"";
+							model.addRow(s);
+						}
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}else if((keHu.getSelectedItem()+"").equals("商品全称") ){
+					try {
+						v = shopdao.selectSI("",content.getText()+"");
+						String[] s = new String[5];
+						int i = 0;
+						for(ShopInformation ss: v){
+							s[0] = ss.getGoodID();
+							s[1] = ss.getGoodName();
+							s[2] = ss.getGoodPrice()+"";
+							s[3] = ss.getGoodNum()+"";
+							s[4] = ss.getGoodUnit()+"";
+							model.addRow(s);
+						}
+					} catch (SQLException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		selectAllButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int count = model.getRowCount();
+				Vector<ShopInformation> v = new Vector<>();
+				for (int i = 0; i < count; i++) {
+					model.removeRow(0);
+				}
+				try {
+					v = shopdao.selectSI("","");
+					String[] s = new String[5];
+					int i = 0;
+					for(ShopInformation ss: v){
+						s[0] = ss.getGoodID();
+						s[1] = ss.getGoodName();
+						s[2] = ss.getGoodPrice()+"";
+						s[3] = ss.getGoodNum()+"";
+						s[4] = ss.getGoodUnit()+"";
+						model.addRow(s);
+					}
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}
+			}
+		});
+	}
+}

@@ -1,0 +1,17 @@
+package Test4;
+
+public class BinaryTreeMain {
+
+	public static void main(String[] args) {
+		BinaryTree bt = new BinaryTree();
+//		bt.createBT("ABCD#EF####G###");
+//		bt.createBT("");
+//		bt.print();
+		bt.createBT("AB#C###");
+		System.out.println("递归中序遍历树:");
+		bt.recursiveErgodic();
+		System.out.println("非递归中序遍历树:");
+		bt.notRecursiveErgodic();
+	}
+
+}

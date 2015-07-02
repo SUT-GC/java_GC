@@ -1,0 +1,10 @@
+package Test5;
+
+public class UndirectedGraphMain {
+
+	public static void main(String[] args) {
+		UndirectedGraph ug1 = new UndirectedGraph(4, 4);
+		ug1.print();
+	}
+
+}

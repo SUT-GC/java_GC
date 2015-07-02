@@ -1,0 +1,11 @@
+package Test3;
+
+public class ExpCalMain {
+	public static void main(String[] args){
+		ExpCal ec = new ExpCal();
+		ec.getInfix("3*(4+2)/2-5");
+		ec.infixToSuffix();
+		System.out.println(ec.getInfix()+"  转换为后缀表达式: "+ec.getSuffix());
+		System.out.println(ec.Calculate());
+	}
+}

@@ -1,0 +1,16 @@
+package Test3;
+
+public class ExpCal {
+	private String Infix;
+	private String Suffix;
+	private StringBuffer buff;
+	public void getInfix(String infix){
+		this.Infix = infix;
+	}
+	public void infixToSuffix(){
+		for(int i = 0; i < Infix.length(); i++){
+			System.out.println(Infix.charAt(i));
+		}
+	}
+}
+

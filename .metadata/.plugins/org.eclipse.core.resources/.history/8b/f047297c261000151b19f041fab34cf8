@@ -1,0 +1,20 @@
+package Test5;
+
+public class UndirectedGraphMain {
+
+	public static void main(String[] args) {
+		UndirectedGraph ug1 = new UndirectedGraph(4, 5);
+		System.out.println("您输入的图的连接矩阵为 : ");
+		ug1.print();
+		System.out.println("深度优先搜索遍历图结果为: ");
+		ug1.DFSG("v2");
+/*
+ * v0 v1 v2 v3
+ *
+v0 v3
+v0 v1
+v1 v3
+v1 v2
+ */
+	}
+}

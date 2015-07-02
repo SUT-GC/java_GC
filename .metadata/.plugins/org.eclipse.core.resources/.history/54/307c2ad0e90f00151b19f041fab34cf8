@@ -1,0 +1,49 @@
+package Test4;
+
+import java.util.ArrayDeque;
+
+public class BinaryTree {
+	private char[] BT = new char[9999];
+	private ArrayDeque <Integer> 	queue = new ArrayDeque<>();
+	public BinaryTree(){
+		for(int i = 0; i < 9999; i++){
+			BT[i] = '*';
+		}
+		for(int i = 0; i < 99; i++){
+			System.out.print(BT[i]+" ");
+		}
+		System.out.println();
+	}
+	public void createBT(String s){
+		BT[1] = s.charAt(0);
+		queue.offerLast(1);
+		for(int i = 1; i < s.length(); i++){
+			if(s.charAt(i) == '#'){
+				if(BT[2*queue.peekFirst()] == '*'){
+					System.out.println(s.charAt(i)+"========"+2*queue.peekFirst());
+					BT[2*queue.peekFirst()] = '#';
+				}else{
+					System.out.println(s.charAt(i)+"========"+(2*queue.peekFirst()+1));
+					BT[2*queue.peekFirst()+1] = '#';
+					queue.pollFirst();
+				}
+			}else{
+				if(BT[2*queue.peekFirst()] == '*'){
+					System.out.println(s.charAt(i)+"========"+2*queue.peekFirst());
+					BT[2*queue.peekFirst()] = s.charAt(i);
+					queue.offerLast(2*queue.peekFirst());
+				}else{
+					System.out.println(s.charAt(i)+"========"+(2*queue.peekFirst()+1));
+					BT[2*queue.peekFirst()+1] = s.charAt(i);
+					queue.offerLast(2*queue.peekFirst());
+					queue.pollFirst();
+				}
+			}
+		}
+	}
+	public void print(){
+		for(int i  = 0; i < 20; i++){
+			System.out.println(BT[i]);
+		}
+	}
+}

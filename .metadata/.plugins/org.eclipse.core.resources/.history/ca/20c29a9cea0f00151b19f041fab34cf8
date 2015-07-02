@@ -1,0 +1,11 @@
+package Test4;
+
+public class BinaryTreeMain {
+
+	public static void main(String[] args) {
+		BinaryTree bt = new BinaryTree();
+		bt.createBT("1234#67####14###");
+		bt.print();
+	}
+
+}

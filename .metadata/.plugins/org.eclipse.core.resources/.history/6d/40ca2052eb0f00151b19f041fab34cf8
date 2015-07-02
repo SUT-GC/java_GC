@@ -1,0 +1,13 @@
+package Test4;
+
+public class BinaryTreeMain {
+
+	public static void main(String[] args) {
+		BinaryTree bt = new BinaryTree();
+		bt.createBT("ABCD#EF####G###");
+//		bt.createBT("");
+//		bt.print();
+		bt.orderTraversal();
+	}
+
+}
