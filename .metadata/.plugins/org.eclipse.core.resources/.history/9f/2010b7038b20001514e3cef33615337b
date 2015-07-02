@@ -1,0 +1,26 @@
+package test2;
+
+public class PCB {
+	private int pid;
+	private int ppid;
+	private int pow;
+	public int getPid() {
+		return pid;
+	}
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+	public int getPpid() {
+		return ppid;
+	}
+	public void setPpid(int ppid) {
+		this.ppid = ppid;
+	}
+	public int getPow() {
+		return pow;
+	}
+	public void setPow(int pow) {
+		this.pow = pow;
+	}
+	
+}

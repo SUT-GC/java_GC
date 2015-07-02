@@ -1,0 +1,24 @@
+package curriculumdesign.cd1;
+
+import java.util.Vector;
+
+public class Command {
+	
+	private Process process = new Process();
+	
+	public void createProcess(int pid, int ppid, int pow){
+		PCB pcb = new PCB(pid, ppid, pow);
+		process.createProcess(pcb);
+	}
+	
+	public void showAllProcess(){
+		Vector<PCB> pcbs= process.getPcbs();
+		for(int i = 0; i < pcbs.size(); i++){
+			System.out.print("pid :" + pcbs.get(i).getPid() + "ppid: " +pcbs.get(i).getPpid()+"pow : "+ pcbs.get(i).getPow() );
+		}
+	}
+	public static void main(String[] args) {
+
+	}
+
+}

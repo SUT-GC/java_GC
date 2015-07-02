@@ -1,0 +1,69 @@
+package curriculumdesign.cd1;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Command {
+
+	private Process process = new Process();
+
+	public boolean findParent(PCB pcb){
+		for(PCB p: process.getPcbs()){
+			if(p.getPid() == pcb.getPpid()){
+				return true;
+			}
+		}
+		return false;
+	}
+	public void createProcess(PCB pcb) {
+		if(pcb.getPid() == pcb.getPpid() || findParent(pcb)){
+			process.createProcess(pcb);
+			System.out.println("创建进程成功.......");
+		}else{
+			System.out.println("未找到该进程的父进程 ! ");
+		}
+	}
+
+	public void showAllProcess(){
+		Vector<PCB> pcbs= process.getPcbs();
+		for(int i = 0; i < pcbs.size(); i++){
+			System.out.print("  父进程 :  (  pid: " + pcbs.get(i).getPid() 
+					+ "  ppid:  " +pcbs.get(i).getPpid()+"  pow:  "+ pcbs.get(i).getPow() +" ) 子进程 :  ");
+			for(int j = i+1; j < pcbs.size(); j++){
+				if(pcbs.get(i).getPid() == pcbs.get(j).getPpid()){
+					System.out.print(" ( pid:  " + pcbs.get(j).getPid() 
+							+ "  ppid:  " +pcbs.get(j).getPpid()+"  pow :  "+ pcbs.get(j).getPow() +"  )  ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Command command = new Command();
+		while(sc.hasNext()){
+			String cmd = sc.next();
+			if(cmd.equals("exit")){
+				return ;
+			}else if(cmd.equals("create")){
+				PCB pcb = new PCB();
+				System.out.print("请输入您要创建的进程号:  ");
+				pcb.setPid(sc.nextInt());
+				System.out.print("请输入您该进程的父进程号:  ");
+				pcb.setPpid(sc.nextInt());
+				System.out.print("请输入您该进程的优先级 (0~10) :  ");
+				pcb.setPow(sc.nextInt());
+				command.createProcess(pcb);
+			}else if(cmd.equals("showall")){
+				System.out.println("===============开始显示进程树===============");
+				command.showAllProcess();
+				System.out.println("===============进程树显示完毕===============");
+			}else{
+				System.out.println("输入命令有误, 请重新输入...... ");
+			}
+			
+		}
+	}
+
+}
