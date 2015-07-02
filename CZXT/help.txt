@@ -1,0 +1,66 @@
+﻿==========欢迎使用：GC终端模拟器--文件管理系统===========
+
+version：
+	2.0
+	
+introduction：
+	此系统模拟了终端里的文件管理系统。
+	即如linux 终端里的 cd，mkdir, ls, cp, rm, clear, cat等命令
+	该文件管理系统也提供了相应的命令实现。
+	下面我们来看一下2.0版本的文件管理系统都有哪些命令提供给大家
+	
+future:
+	在3.0版本，diff(比较两个文件的差异), rmto(将一个目录下的文件剪贴到另个目录下)
+	这两个命令将与大家见面( @ . @ ).......
+	 
+commands:
+	cd:
+		format:
+			cd /etc (linux)
+			cd d: (Windows)
+		action:
+			进入相应的文件目录
+	clear:
+		format:
+			clear
+		action:
+			清屏
+	cpfile:
+		format:
+			cpfile /home/1.txt /home/2.txt (linux)
+			cpfile d:/1.txt d:2.txt (windows)
+		action:
+			将/home/下的1.txt拷贝成/home/2.txt
+	cat:
+		format:
+			cat /home/1.txt
+		action:
+			将/home/1.txt文件内容显示出来
+	delfile:
+		format:
+			delfile /home/1.txt (linux)
+			delfile d:/1.txt (windows)
+		action:
+			删除/home/1.txt文件
+	help:
+		format:
+			help
+		action:
+			显示帮助文档，即本文档
+	ls:
+		format:
+			ls
+		action:
+			显示当前目录下的所有文件
+	ls all:
+		format:
+			ls all
+		action:
+			显示当前目录下的所有文件及子文件
+	newfile:
+		format:
+			newfile /home/1.txt (linux)
+			newfile d:/1.txt (windows)
+		action:
+			在/home目录下新建1.txt文件
+			
