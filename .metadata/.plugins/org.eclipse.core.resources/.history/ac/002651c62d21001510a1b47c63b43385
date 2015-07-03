@@ -1,0 +1,9 @@
+package curriculumdesign.cd2;
+
+public class TranMessage {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
