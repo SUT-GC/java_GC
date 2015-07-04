@@ -1,0 +1,53 @@
+package curriculumdesign.cd6;
+
+import java.util.Vector;
+
+public class DiskScheduling {
+	private Vector<Integer> request = new Vector<Integer>();
+	private Integer NOWSEAT;
+
+	public Integer getNOWSEAT() {
+		return NOWSEAT;
+	}
+
+	public void setNOWSEAT(Integer nOWSEAT) {
+		NOWSEAT = nOWSEAT;
+	}
+
+	public void entryRequest(Integer request) {
+		this.request.add(request);
+	}
+
+	public void FCFS(){
+		double sum = 0;
+		int n;
+		n = request.size();
+		for(int i = 0; i < request.size(); i++){
+			System.out.print(request.get(i)+"  ");
+			sum += Math.abs((request.get(i)-NOWSEAT)*1.0);
+			NOWSEAT = request.get(i);
+		}
+		System.out.println();
+		System.out.println("平均寻道长度为: " + (sum / n));
+	}
+	public void SSTF(){
+		int maxl = Integer.MAX_VALUE;
+		double sum = 0.0;
+		int n = request.size();
+		int maxi = 0;
+		for(int i = 0; i < n; i++){
+			for(int j = 0; j < n-i; j++){
+				if((request.get(j)-NOWSEAT) < maxl){
+					maxi = j;
+					maxl = (request.get(j)-NOWSEAT);
+				}
+			}
+			System.out.print(request.get(maxi)+" ");
+			sum += Math.abs((request.get(maxi)-NOWSEAT)*1.0);
+			NOWSEAT = request.get(maxi);
+			request.remove(maxi);
+		}
+		System.out.println();
+		System.out.println("平均寻道长度为: " + (sum / n));
+	}
+}

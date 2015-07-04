@@ -1,0 +1,20 @@
+package curriculumdesign.cd6;
+
+public class Control {
+
+	public static void main(String[] args) {
+		Integer[] seq = new Integer[]{98, 183, 37, 122, 14, 124, 65, 67};
+		DiskScheduling ds = new DiskScheduling();
+		ds.setNOWSEAT(53);
+		for(Integer num: seq){
+			ds.entryRequest(num);
+		}
+		System.out.println("先到先服务磁盘调度算法......");
+		ds.FCFS();
+		System.out.println("------------------------------------------------------------");
+		System.out.println("最短寻道时间磁盘调度算法......");
+		ds.SSTF();
+		System.out.println("------------------------------------------------------------");
+	}
+
+}

@@ -21,7 +21,6 @@
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="Test4.BinaryTree"/>
 <fullyQualifiedTypeName name="Test5.UndirectedGraph"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.io.StringReader"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
@@ -38,7 +37,10 @@
 <fullyQualifiedTypeName name="java.lang.Thread.State"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd3.Tables"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd3.Job"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd3.FreeTable"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd3.AllocationUnit"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="curriculumdesign.cd6.DiskScheduling"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
