@@ -18,7 +18,6 @@
 <fullyQualifiedTypeName name="windows.openFrameAction"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
 <fullyQualifiedTypeName name="Test3.ExpCal"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="Test4.BinaryTree"/>
 <fullyQualifiedTypeName name="Test5.UndirectedGraph"/>
@@ -27,7 +26,6 @@
 <fullyQualifiedTypeName name="java.io.StringReader"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="java.util.ArrayDeque"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd4.Despath"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
@@ -36,4 +34,11 @@
 <fullyQualifiedTypeName name="java.lang.CharSequence"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd8.Customer"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd8.Producer"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Thread.State"/>
+<fullyQualifiedTypeName name="curriculumdesign.cd3.Tables"/>
+<fullyQualifiedTypeName name="curriculumdesign.cd3.Job"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="curriculumdesign.cd3.FreeTable"/>
+<fullyQualifiedTypeName name="curriculumdesign.cd3.AllocationUnit"/>
 </qualifiedTypeNameHistroy>

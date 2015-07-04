@@ -1,0 +1,33 @@
+package curriculumdesign.cd3;
+
+public class AllocationUnit {
+	private String JOBNAME;
+	private int STARTADD;
+	private int JOBSIZE;
+	private boolean ISFREE;
+	public String getJOBNAME() {
+		return JOBNAME;
+	}
+	public void setJOBNAME(String jOBNAME) {
+		JOBNAME = jOBNAME;
+	}
+	public int getSTARTADD() {
+		return STARTADD;
+	}
+	public void setSTARTADD(int sTARTADD) {
+		STARTADD = sTARTADD;
+	}
+	public int getJOBSIZE() {
+		return JOBSIZE;
+	}
+	public void setJOBSIZE(int jOBSIZE) {
+		JOBSIZE = jOBSIZE;
+	}
+	public boolean isISFREE() {
+		return ISFREE;
+	}
+	public void setISFREE(boolean iSFREE) {
+		ISFREE = iSFREE;
+	}
+	
+}

@@ -1,0 +1,22 @@
+package curriculumdesign.cd3;
+
+import java.util.Vector;
+
+public class Tables {
+	private Vector <AllocationUnit> distribution;
+	private Vector <FreeTable> free;
+	private int STARTID;
+	public Tables(){
+		distribution = new Vector<AllocationUnit>();
+		free = new Vector<FreeTable>();
+		STARTID = 0;
+	}
+	public void distributionJob(Job job){
+		AllocationUnit au1 = new AllocationUnit();
+		au1.setJOBNAME(job.getName());
+		au1.setJOBSIZE(job.getSize());
+		au1.setSTARTADD(STARTID);
+		au1.setISFREE(false);
+		STARTID++;
+	}
+}

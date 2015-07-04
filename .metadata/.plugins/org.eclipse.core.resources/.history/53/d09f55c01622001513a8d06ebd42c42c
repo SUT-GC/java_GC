@@ -1,0 +1,19 @@
+package curriculumdesign.cd3;
+
+public class FreeTable {
+	private int STARTADD;
+	private int FREESIZE;
+	public int getSTARTADD() {
+		return STARTADD;
+	}
+	public void setSTARTADD(int sTARTADD) {
+		STARTADD = STARTADD;
+	}
+	public int getFREESIZE() {
+		return FREESIZE;
+	}
+	public void setFREESIZE(int fREESIZE) {
+		FREESIZE = fREESIZE;
+	}
+	
+}

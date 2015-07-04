@@ -1,0 +1,63 @@
+package curriculumdesign.cd3;
+
+import java.util.Vector;
+
+public class Tables {
+	private Vector <AllocationUnit> distribution;
+	private Vector <FreeTable> free;
+	private int STARTID;
+	private int FREESIZE;
+	public Tables(int FREESIZE){
+		distribution = new Vector<AllocationUnit>();
+		free = new Vector<FreeTable>();
+		STARTID = 0;
+		this.FREESIZE = FREESIZE;
+		FreeTable ft = new FreeTable();
+		ft.setFREESIZE(FREESIZE);
+		ft.setSTARTADD(0);
+		free.add(ft);
+	}
+	public void distributionJob(Job job){
+		for(int i = 0; i < free.size(); i++){
+			if(free.get(i).getFREESIZE() >= job.getSize()){
+				
+				STARTID = free.get(i).getSTARTADD();
+				AllocationUnit au1 = new AllocationUnit();
+				au1.setJOBNAME(job.getName());
+				au1.setJOBSIZE(job.getSize());
+				au1.setSTARTADD(STARTID);
+				au1.setISFREE(false);
+				System.out.println(au1.getJOBSIZE()+"-----------");
+				STARTID+=job.getSize();
+				distribution.add(au1);
+				FreeTable ft1 = new FreeTable();
+				System.out.println(au1.getSTARTADD()+"=======");
+				ft1.setSTARTADD(au1.getSTARTADD()+au1.getJOBSIZE());
+				ft1.setFREESIZE(free.get(i).getFREESIZE()-job.getSize());
+				free.remove(i);
+				free.add(ft1);
+			}
+		}
+	}
+	public void recoveryMemory(String name){
+		
+	}
+	public void showDistribution(){
+		System.out.println("------------------------------分配分区表 ------------------------------ ");
+		for(int i = 0; i < distribution.size(); i++){
+			if(distribution.get(i).isISFREE()){
+				System.out.println("------------------------------------空表目 ");
+			}else{
+				System.out.println(distribution.get(i));
+			}
+		}
+		System.out.println("---------------------------------------------------------------------------- ");
+	}
+	public void showFree(){
+		System.out.println("------------------------------空闲分区表------------------------------ ");
+		for(int i = 0; i < free.size(); i++){
+			System.out.println(free.get(i));
+		}
+		System.out.println("---------------------------------------------------------------------------- ");
+	}
+}
