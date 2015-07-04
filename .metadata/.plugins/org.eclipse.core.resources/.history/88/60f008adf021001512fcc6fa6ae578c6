@@ -1,0 +1,13 @@
+package curriculumdesign.cd8;
+
+public class Customer extends Thread {
+	private Case cases;
+	public Customer(String name, Case cases){
+		super(name);
+		this.cases = cases;
+	}
+	public void run(){
+		for(int i = 0; i < 100; i++)
+			cases.customer();
+	}
+}

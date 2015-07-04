@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="Test3.CharWithPow"/>
-<fullyQualifiedTypeName name="java.lang.CharSequence"/>
 <fullyQualifiedTypeName name="windows.CXSPKC"/>
 <fullyQualifiedTypeName name="windows.Win"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
@@ -33,4 +32,8 @@
 <fullyQualifiedTypeName name="curriculumdesign.cd4.Despath"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd4.PCB"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.Condition"/>
+<fullyQualifiedTypeName name="java.lang.CharSequence"/>
+<fullyQualifiedTypeName name="curriculumdesign.cd8.Customer"/>
+<fullyQualifiedTypeName name="curriculumdesign.cd8.Producer"/>
 </qualifiedTypeNameHistroy>

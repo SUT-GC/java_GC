@@ -1,0 +1,22 @@
+package curriculumdesign.cd8;
+
+public class Customer extends Thread {
+	private Case cases;
+	public Customer(String name, Case cases){
+		super(name);
+		this.cases = cases;
+	}
+	public void run(){
+		System.out.println(this.getName());
+		for(int i = 0; i < 100; i++){
+			cases.customer();
+			try {
+				this.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+//			System.out.println("customer "+i);
+	}
+}

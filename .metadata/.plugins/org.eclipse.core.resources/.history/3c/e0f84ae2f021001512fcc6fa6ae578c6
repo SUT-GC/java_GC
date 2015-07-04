@@ -1,0 +1,59 @@
+package curriculumdesign.cd8;
+
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class Case {
+	private final Lock lock = new ReentrantLock();
+	private final Condition cond = lock.newCondition();
+
+	private String[] cases;
+	private int MAXSIZE;
+	private int NOWSIZE;
+	public Case(int size) {
+		this.MAXSIZE = size;
+		cases = new String[size];
+		this.NOWSIZE = 0;
+	}
+	public void printCases(){
+		System.out.print("现在炉子里的面包为  :  [ ");
+		for(int i = 0; i < NOWSIZE; i++){
+			System.out.print(cases[i]+"  ");
+		}
+		System.out.println("] ");
+	}
+	public void product(){
+		lock.lock();
+		try{
+			if(MAXSIZE >= NOWSIZE){
+				cond.await();
+			}else{
+				cases[NOWSIZE] = "面包";
+				NOWSIZE++;
+				printCases();
+				cond.signal();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			lock.unlock();
+		}
+	}
+	public void customer(){
+		lock.lock();
+		try{
+			if(NOWSIZE <= 0){
+				cond.await();
+			}else{
+				NOWSIZE--;
+				printCases();
+				cond.signal();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			lock.unlock();
+		}
+	}
+}
