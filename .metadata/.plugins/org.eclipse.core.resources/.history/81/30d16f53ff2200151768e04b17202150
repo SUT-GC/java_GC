@@ -1,0 +1,83 @@
+package curriculumdesign.cd5;
+
+import java.util.Arrays;
+
+public class Dispath {
+	private int[][] informations;
+	private String[] pname;
+	private int[] res;
+
+	public Dispath(String[] name, int[][] informations, int[] res) {
+		this.informations = informations;
+		this.pname = name;
+		this.res = res;
+	}
+
+	public boolean check() {
+		for (int i = 0; i < res.length; i++) {
+			for (int j = 0; j < pname.length; j++) {
+				res[i] -= informations[j][res.length + i];
+			}
+		}
+//		System.out.println(Arrays.toString(res) + "-------init-------");
+		for (int i = 0; i < res.length; i++) {
+			if (res[i] < 0) {
+				return false;
+			}
+		}
+
+		for (int i = 0; i < pname.length; i++) {
+			for (int i1 = 0; i1 < pname.length; i1++) {
+				if (informations[i1][3 * res.length] != 1) {
+					int count = 0;
+					for (int j = 0; j < res.length; j++) {
+						if (informations[i1][2 * res.length + j] <= res[j]) {
+							count++;
+						}
+					}
+//					System.out.println("count = "+count + "  res.length = " + res.length);
+					if (count == res.length) {
+						informations[i1][3 * res.length] = 1;
+						System.out.print(Arrays.toString(res));
+						System.out.println("  "+pname[i1]+"  ");
+						for (int k = 0; k < res.length; k++) {
+							res[k] += informations[i1][res.length + k];
+						}
+//						System.out.println(Arrays.toString(res));
+//						showInformation();
+					}
+				}
+			}
+		}
+		// System.out.println(Arrays.toString(res));
+//		showInformation();
+		int count = 0;
+		for (int i = 0; i < pname.length; i++) {
+			if (informations[i][3 * res.length] == 1) {
+				count++;
+			}
+		}
+		if (count == pname.length) {
+			System.out.println();
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public void showInformation() {
+		System.out.println("进程名 * Max * Allocation * Need * isOK");
+		for (int i = 0; i < pname.length; i++) {
+			int count = 0;
+			System.out.print(pname[i] + "  *  ");
+			for (int j = 0; j < informations[i].length; j++) {
+				System.out.print(" " + informations[i][j] + " ");
+				count++;
+				if (count % 3 == 0) {
+					System.out.print("  *  ");
+				}
+			}
+			System.out.println();
+		}
+	}
+}
