@@ -21,13 +21,10 @@
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="Test4.BinaryTree"/>
 <fullyQualifiedTypeName name="Test5.UndirectedGraph"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.io.StringReader"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
-<fullyQualifiedTypeName name="java.util.ArrayDeque"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd4.Despath"/>
-<fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd4.PCB"/>
 <fullyQualifiedTypeName name="java.util.concurrent.locks.Condition"/>
 <fullyQualifiedTypeName name="java.lang.CharSequence"/>
@@ -43,4 +40,9 @@
 <fullyQualifiedTypeName name="curriculumdesign.cd6.DiskScheduling"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.util.ArrayDeque"/>
+<fullyQualifiedTypeName name="java.lang.Package"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
+<fullyQualifiedTypeName name="curriculumdesign.cd7.PageRep"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
