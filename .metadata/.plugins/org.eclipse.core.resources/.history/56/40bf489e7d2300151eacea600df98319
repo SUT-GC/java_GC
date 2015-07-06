@@ -22,8 +22,6 @@ public class Control {
 		}
 		System.out.print("产生的请求队列为: ");
 		System.out.println(Arrays.toString(seq));
-		System.out.println("当前磁头所在位置 :  53");
-		System.out.println("------------------------------------------------------------");
 		System.out.println("先到先服务磁盘调度算法......");
 		ds1.FCFS();
 		System.out.println("------------------------------------------------------------");

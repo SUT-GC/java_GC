@@ -22,25 +22,9 @@ public class Control {
 		System.out.println("先进先出页面置换结果如下......");
 		PageRep rp = new PageRep(seqs, 3);
 		rp.FIFO();
-		System.out
-		.println("---------------------------------------产生的页面序列如下---------------------------------------");
-for (int num : seqs) {
-	System.out.print(num + "  ");
-}
-System.out.println("\n物理块一共有 3 个......");
-System.out
-		.println("-----------------------------------------------------------------------------------------------------------");
 		System.out.println("最近最久未使用页面置换算法结果如下......");
 		rp.memSetInit();
 		rp.LRU();
-		System.out
-		.println("---------------------------------------产生的页面序列如下---------------------------------------");
-for (int num : seqs) {
-	System.out.print(num + "  ");
-}
-System.out.println("\n物理块一共有 3 个......");
-System.out
-		.println("-----------------------------------------------------------------------------------------------------------");
 		System.out.println("最佳页面置换算法结果如下......");
 		rp.memSetInit();
 		rp.Optimal();
