@@ -1,0 +1,15 @@
+package Test2;
+
+public class Main {
+	public static void main(String[] args){
+		double[][] A = new double[][]{
+				{2,1,0,0},
+				{1,3,1,0},
+				{0,1,1,1},
+				{0,0,2,1}
+		};
+		double[] y = new double[]{1,2,2,0};
+		ChaseMethod cm1 = new ChaseMethod(A, y, 4);
+		cm1.showAll();
+	}
+}

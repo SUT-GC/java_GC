@@ -3,7 +3,6 @@ package curriculumdesign.cd6;
 import java.util.Arrays;
 
 public class Control {
-
 	public static void main(String[] args) {
 		Integer[] seq = new Integer[]{98, 183, 37, 122, 14, 124, 65, 67};
 		DiskScheduling ds1 = new DiskScheduling();

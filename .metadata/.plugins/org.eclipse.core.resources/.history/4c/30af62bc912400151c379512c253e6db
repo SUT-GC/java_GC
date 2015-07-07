@@ -1,0 +1,35 @@
+package Test2;
+
+public class ChaseMethod {
+	private double[][] a;
+	private double[] x;
+	private double[] d;
+	private double[] y;
+	private double[] u;
+	private double[] c;
+	private double[] l;
+	private double[] b;
+	public ChaseMethod(double[][] aa, double[] dd, int numofx){
+		this.a = aa;
+		this.d = dd;
+		x = new double[numofx];
+		y = new double[d.length];
+		c = new double[d.length];
+		l = new double[d.length];
+		u = new double[d.length];
+		b = new double[d.length];
+		for(int i = 0; i < b.length; i++){
+			b[i] = a[i][i];
+		}
+		
+		u[0] = b[0];
+		y[0] = d[0];
+		
+		for(int i = 1; i < numofx; i++){
+			
+		}
+	}
+	public double[] getX(){
+		return x;
+	}
+}

@@ -119,7 +119,7 @@ public class PageRep {
 				}
 			}
 		}
-		System.out.printf("先进先出算法缺页率为 : %.2f\n", (sum / seqs.length));
+		System.out.printf("最近最久未使用算法缺页率为 : %.2f\n", (sum / seqs.length));
 	}
 	private int findfar(){
 		int maxfar = -1;
@@ -163,6 +163,6 @@ public class PageRep {
 				showMem();
 			}
 		}
-		System.out.printf("先进先出算法缺页率为 : %.2f\n", (sum / seqs.length));
+		System.out.printf("最佳置换算法缺页率为 : %.2f\n", (sum / seqs.length));
 	}
 }
