@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Test3.charOfPow"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.Stack"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="Test3.CharWithPow"/>
-<fullyQualifiedTypeName name="windows.CXSPKC"/>
-<fullyQualifiedTypeName name="windows.Win"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-<fullyQualifiedTypeName name="javax.swing.JTextField"/>
-<fullyQualifiedTypeName name="javax.swing.JLabel"/>
-<fullyQualifiedTypeName name="javax.swing.Box"/>
 <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="com.shop.ShopInformation"/>
@@ -49,9 +38,26 @@
 <fullyQualifiedTypeName name="Test2.ThreeSpline"/>
 <fullyQualifiedTypeName name="Test2.TSWin"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="javax.naming.directory.SearchResult"/>
 <fullyQualifiedTypeName name="Season"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="FinalTest"/>
+<fullyQualifiedTypeName name="java.util.Base64.Encoder"/>
+<fullyQualifiedTypeName name="java.util.Base64.Decoder"/>
+<fullyQualifiedTypeName name="java.util.Base64"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.binary.Base64"/>
+<fullyQualifiedTypeName name="org.bouncycastle.util.encoders.Base64Encoder"/>
+<fullyQualifiedTypeName name="org.bouncycastle.util.encoders.Base64"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.bouncycastle.jcajce.util.MessageDigestUtils"/>
+<fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.MD4Digest"/>
+<fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.MD5Digest"/>
+<fullyQualifiedTypeName name="secret.MDTest"/>
+<fullyQualifiedTypeName name="java.security.MessageDigest"/>
+<fullyQualifiedTypeName name="org.bouncycastle.util.encoders.HexEncoder"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.binary.Hex"/>
+<fullyQualifiedTypeName name="org.bouncycastle.crypto.Digest"/>
+<fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.SHA1Digest"/>
+<fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.SHA224Digest"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.digest.DigestUtils"/>
 </qualifiedTypeNameHistroy>
