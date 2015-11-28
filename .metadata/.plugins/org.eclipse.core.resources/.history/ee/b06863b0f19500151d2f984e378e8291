@@ -29,7 +29,7 @@ public class SHATest {
 		System.out.println("=====================");
 		
 		/*
-		    =====jdk提供的SHA1=====
+		 * =====jdk提供的SHA1=====
 			消息摘要之后:02470457fc2738acb459ee266dd66976324ee5b8
 			=====================
 			=====bc提供的SHA1=====
@@ -44,6 +44,7 @@ public class SHATest {
 			=====bc提供的SHA224=====
 			消息摘要之后:f2a63bc30d2d8fcebc9b5aa4f660b6f422328731588346dbd55a1a2f
 			=====================
+
 		 */
 	}
 
