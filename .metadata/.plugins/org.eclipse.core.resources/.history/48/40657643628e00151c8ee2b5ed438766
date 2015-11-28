@@ -1,0 +1,20 @@
+enum Season{
+	RED,GREEN;
+	
+}
+
+class FinalTest{
+	public static final int a = 2;
+}
+
+public class EnumTest {
+	public static void main(String[] args) {
+		Season s = Season.RED;
+		Integer a = 1;
+		Integer b = a;
+		b = 3;
+		System.out.println(a);
+		System.out.println(Season.RED.name());
+		System.out.println(Season.RED);
+	}
+}

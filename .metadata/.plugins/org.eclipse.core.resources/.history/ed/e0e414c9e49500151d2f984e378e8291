@@ -1,0 +1,12 @@
+package secret;
+
+public class MDTest {
+	public static String src = "i am gc MD";
+	public static void main(String[] args) {
+		System.out.println("=====jdk提供的MD5=====");
+		System.out.println("=====================");
+	}
+	public static void jdkMD5(){
+		
+	}
+}

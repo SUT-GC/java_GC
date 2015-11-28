@@ -1,0 +1,8 @@
+package secret;
+
+public class MDTest {
+	public static String src = "i am gc MD"
+	public static void main(String[] args) {
+		
+	}
+}

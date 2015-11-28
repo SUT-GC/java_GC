@@ -1,0 +1,12 @@
+package screte;
+
+public class Base64Test {
+	public static String src = "i am gc base64";
+	
+	public static void main(String[] args) {
+		
+	}
+	public static void jdkBase64(){
+		
+	}
+}

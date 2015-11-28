@@ -1,0 +1,15 @@
+enum Season{
+	RED("红色",1),GREEN("绿色",2);
+}
+
+public class EnumTest {
+	public static void main(String[] args) {
+		Season s = Season.SPRING;
+		switch(s){
+		case SPRING:{
+			System.out.println("Spring");
+			break;
+		}
+		}
+	}
+}

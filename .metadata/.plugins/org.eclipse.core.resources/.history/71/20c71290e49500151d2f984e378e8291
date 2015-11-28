@@ -1,0 +1,7 @@
+package secret;
+
+public class MDTest {
+	public static void main(String[] args) {
+		
+	}
+}

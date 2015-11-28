@@ -30,7 +30,6 @@
 <fullyQualifiedTypeName name="java.lang.CharSequence"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd8.Customer"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd8.Producer"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.Thread.State"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd3.Tables"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd3.Job"/>
@@ -43,7 +42,6 @@
 <fullyQualifiedTypeName name="java.lang.Package"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd7.PageRep"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd5.Dispath"/>
 <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
@@ -51,4 +49,9 @@
 <fullyQualifiedTypeName name="Test2.ThreeSpline"/>
 <fullyQualifiedTypeName name="Test2.TSWin"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.naming.directory.SearchResult"/>
+<fullyQualifiedTypeName name="Season"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="FinalTest"/>
 </qualifiedTypeNameHistroy>

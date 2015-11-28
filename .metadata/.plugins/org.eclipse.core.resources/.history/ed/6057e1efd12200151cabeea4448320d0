@@ -1,9 +1,0 @@
-package curriculumdesign.cd7;
-
-public class Control {
-
-	public static void main(String[] args) {
-
-	}
-
-}
