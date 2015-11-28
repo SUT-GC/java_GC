@@ -1,0 +1,11 @@
+package secret;
+
+public class SHATest {
+	public static String src = "i am gc SHA";
+	
+	public static void main(String[] args) {
+
+	}
+
+	
+}

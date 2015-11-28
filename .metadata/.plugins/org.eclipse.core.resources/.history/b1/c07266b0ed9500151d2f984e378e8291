@@ -1,0 +1,24 @@
+package secret;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class SHATest {
+	public static String src = "i am gc SHA";
+	
+	public static void main(String[] args) {
+
+	}
+
+	/*
+	 * jdk对SHA算法实现
+	 */
+	public static void jdkSHA1(){
+		try {
+			byte[] result;
+			MessageDigest digest = MessageDigest.getInstance("SHA");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

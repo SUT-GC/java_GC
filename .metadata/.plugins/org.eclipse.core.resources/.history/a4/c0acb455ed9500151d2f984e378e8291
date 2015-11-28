@@ -1,0 +1,18 @@
+package secret;
+
+import java.security.MessageDigest;
+
+public class SHATest {
+	public static String src = "i am gc SHA";
+	
+	public static void main(String[] args) {
+
+	}
+
+	/*
+	 * jdk对SHA算法实现
+	 */
+	public static void jdkSHA1(){
+		MessageDigest digest = MessageDigest.getInstance("SHA");
+	}
+}

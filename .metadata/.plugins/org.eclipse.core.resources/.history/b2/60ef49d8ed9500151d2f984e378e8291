@@ -1,0 +1,30 @@
+package secret;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import org.apache.commons.codec.binary.Hex;
+import org.bouncycastle.util.encoders.HexEncoder;
+
+public class SHATest {
+	public static String src = "i am gc SHA";
+	
+	public static void main(String[] args) {
+
+	}
+
+	/*
+	 * jdk对SHA算法实现
+	 */
+	public static void jdkSHA1(){
+		try {
+			byte[] result;
+			MessageDigest digest = MessageDigest.getInstance("SHA");
+			digest.digest(src.getBytes());
+			result = digest.digest();
+			System.out.println("消息摘要之后:"+Hex.encodeHexString(result));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
