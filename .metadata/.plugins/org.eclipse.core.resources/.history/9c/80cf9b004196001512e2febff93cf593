@@ -1,0 +1,24 @@
+package secret;
+
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.KeyGenerator;
+
+public class AESTest {
+	public static String src = "i am AES";
+	
+	public static void main(String[] args) {
+
+	}
+	
+	public static void jdkAES(){
+		try {
+			//生成秘钥
+			KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+		    //初始化KeyGenerator,密钥长度默认
+			keyGenerator.init(keysize);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,23 @@
+package secret;
+
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.KeyGenerator;
+
+public class SDESTest {
+
+	public static String src = "i am 3DES";
+	public static void main(String[] args) {
+
+	}
+	public static void jdk3DES(){
+		//生成Key
+		try {
+			//用DESede来实例化三重DES
+			KeyGenerator keyGenerator = KeyGenerator.getInstance("DESede");
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

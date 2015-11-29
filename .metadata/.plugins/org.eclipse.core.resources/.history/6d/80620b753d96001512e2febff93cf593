@@ -1,0 +1,12 @@
+package secret;
+
+public class SDESTest {
+
+	public static String = "i am 3DES"
+	public static void main(String[] args) {
+
+	}
+	public static void jdk3DES(){
+		
+	}
+}

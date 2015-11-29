@@ -1,0 +1,38 @@
+package secret;
+
+import java.security.Key;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+
+import org.apache.commons.codec.binary.Hex;
+
+public class PBETest {
+
+	public static String stc = "i am gc PBE";
+	public static void main(String[] args) {
+		jdkPBE();
+	}
+	public static void jdkPBE(){
+		//初始化盐
+		SecureRandom random = new SecureRandom();
+		//产生一个8位的盐
+		byte[] salt = random.generateSeed(8);
+		//创建口令
+		String password = "gc";
+		//将口令转换成秘钥
+		PBEKeySpec pbeKeySpec = 	new PBEKeySpec(password.toCharArray());
+		try {
+			//PBEWITHMD5andDES产生秘钥工厂
+			SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance("PBEWITHMD5andDES");
+			//产生Key
+			Key key = secretKeyFactory.generateSecret(pbeKeySpec);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		//加密
+	}
+}

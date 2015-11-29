@@ -1,0 +1,15 @@
+package secret;
+
+import javax.crypto.KeyGenerator;
+
+public class SDESTest {
+
+	public static String src = "i am 3DES";
+	public static void main(String[] args) {
+
+	}
+	public static void jdk3DES(){
+		//生成Key
+		KeyGenerator keyGenerator = KeyGenerator.getInstance("DESede");
+	}
+}

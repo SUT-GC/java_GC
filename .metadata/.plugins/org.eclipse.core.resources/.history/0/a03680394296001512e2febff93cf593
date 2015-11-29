@@ -1,0 +1,51 @@
+package secret;
+
+import java.security.Key;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
+
+import org.apache.commons.codec.binary.Hex;
+
+public class AESTest {
+	public static String src = "i am AES";
+	
+	public static void main(String[] args) {
+
+	}
+	
+	public static void jdkAES(){
+		try {
+			//生成秘钥
+			KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+		    //初始化KeyGenerator,密钥长度默认
+			keyGenerator.init(new SecureRandom());
+			//生成秘钥
+			SecretKey secretKey = keyGenerator.generateKey();
+			//生成byte数组
+			byte[] byteKey = secretKey.getEncoded();
+			//输出
+			System.out.println("生成的秘钥为:"+Hex.encodeHexString(byteKey));
+			
+			//加密
+			Cipher cipher = Cipher.getInstance("AES");
+			cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+			byte[] result = cipher.doFinal(src.getBytes());
+			System.out.println("加密后的结果:"+Hex.encodeHexString(result));
+			
+			//byteKey转换
+			//AES的Key转换与DES有点区别
+			Key key = new SecretKeySpec(byteKey, "AES");
+			
+			//解密
+			cipher.init(Cipher.DECRYPT_MODE, key);
+			cipher.doFinal(input)
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

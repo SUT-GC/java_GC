@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-<fullyQualifiedTypeName name="com.shop.ShopInformation"/>
-<fullyQualifiedTypeName name="java.lang.Float"/>
-<fullyQualifiedTypeName name="windows.openFrameAction"/>
-<fullyQualifiedTypeName name="javax.swing.JPanel"/>
-<fullyQualifiedTypeName name="Test3.ExpCal"/>
-<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-<fullyQualifiedTypeName name="Test4.BinaryTree"/>
-<fullyQualifiedTypeName name="Test5.UndirectedGraph"/>
-<fullyQualifiedTypeName name="java.io.StringReader"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd4.Despath"/>
 <fullyQualifiedTypeName name="curriculumdesign.cd4.PCB"/>
@@ -48,16 +36,28 @@
 <fullyQualifiedTypeName name="org.apache.commons.codec.binary.Base64"/>
 <fullyQualifiedTypeName name="org.bouncycastle.util.encoders.Base64Encoder"/>
 <fullyQualifiedTypeName name="org.bouncycastle.util.encoders.Base64"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="org.bouncycastle.jcajce.util.MessageDigestUtils"/>
 <fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.MD4Digest"/>
 <fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.MD5Digest"/>
 <fullyQualifiedTypeName name="secret.MDTest"/>
 <fullyQualifiedTypeName name="java.security.MessageDigest"/>
 <fullyQualifiedTypeName name="org.bouncycastle.util.encoders.HexEncoder"/>
-<fullyQualifiedTypeName name="org.apache.commons.codec.binary.Hex"/>
 <fullyQualifiedTypeName name="org.bouncycastle.crypto.Digest"/>
 <fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.SHA1Digest"/>
 <fullyQualifiedTypeName name="org.bouncycastle.crypto.digests.SHA224Digest"/>
 <fullyQualifiedTypeName name="org.apache.commons.codec.digest.DigestUtils"/>
+<fullyQualifiedTypeName name="javax.crypto.spec.DESKeySpec"/>
+<fullyQualifiedTypeName name="javax.crypto.spec.DESedeKeySpec"/>
+<fullyQualifiedTypeName name="javax.crypto.KeyGenerator"/>
+<fullyQualifiedTypeName name="javax.crypto.SecretKey"/>
+<fullyQualifiedTypeName name="javax.crypto.spec.SecretKeySpec"/>
+<fullyQualifiedTypeName name="java.security.SecureRandom"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.crypto.SecretKeyFactory"/>
+<fullyQualifiedTypeName name="java.security.Key"/>
+<fullyQualifiedTypeName name="org.bouncycastle.asn1.pkcs.PBEParameter"/>
+<fullyQualifiedTypeName name="javax.crypto.spec.PBEKeySpec"/>
+<fullyQualifiedTypeName name="javax.crypto.Cipher"/>
+<fullyQualifiedTypeName name="javax.crypto.spec.PBEParameterSpec"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.binary.Hex"/>
 </qualifiedTypeNameHistroy>

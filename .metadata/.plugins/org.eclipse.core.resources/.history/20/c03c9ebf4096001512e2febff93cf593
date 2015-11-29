@@ -1,0 +1,13 @@
+package secret;
+
+public class AESTest {
+	public static String src = "i am AES";
+	
+	public static void main(String[] args) {
+
+	}
+	
+	public static void jdkAES(){
+		//生成秘钥
+	}
+}
